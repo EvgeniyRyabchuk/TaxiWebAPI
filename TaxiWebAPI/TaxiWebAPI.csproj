@@ -181,8 +181,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAL\Clients.cs" />
     <Compile Include="Models\DbCtx\TaxiDbContext.cs" />
-    <Compile Include="Models\DTO\AddClientDTO.cs" />
-    <Compile Include="Models\DTO\ClienShortDTO.cs" />
+    <Compile Include="Models\DTO\Client\AddClientDTO.cs" />
+    <Compile Include="Models\DTO\Client\ClienShortDTO.cs" />
+    <Compile Include="Models\DTO\Client\EditClientDTO.cs" />
     <Compile Include="Models\Entities\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientService.cs" />

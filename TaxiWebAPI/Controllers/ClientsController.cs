@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 using TaxiWebAPI.Models.DTO;
@@ -20,15 +16,15 @@ namespace TaxiWebAPI.Controllers
         }
 
         // GET: api/Client
-        public IEnumerable<string> Get()
+        public async Task<List<ClienShortDTO>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _clientService.GetAll();
         }
 
         // GET: api/Client/5
-        public string Get(int id)
+        public async Task<ClienShortDTO> Get(int id)
         {
-            return "value";
+            return await _clientService.GetById(id);
         }
 
         // POST: api/Client
@@ -38,13 +34,15 @@ namespace TaxiWebAPI.Controllers
         }
 
         // PUT: api/Client/5
-        public void Put(int id, [FromBody] string value)
+        public async Task<bool> Put([FromBody] EditClientDTO clientToUpdate)
         {
+            return await _clientService.UpdateClient(clientToUpdate);
         }
 
         // DELETE: api/Client/5
-        public void Delete(int id)
+        public async Task<bool> Delete(int id)
         {
+            return await _clientService.DeleteClientById(id);
         }
     }
 }
