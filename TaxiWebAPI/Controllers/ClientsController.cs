@@ -16,19 +16,19 @@ namespace TaxiWebAPI.Controllers
         }
 
         // GET: api/Client
-        public async Task<List<ClienShortDTO>> Get()
+        public async Task<List<ClientShortDTO>> Get()
         {
             return await _clientService.GetAll();
         }
 
         // GET: api/Client/5
-        public async Task<ClienShortDTO> Get(int id)
+        public async Task<ClientShortDTO> Get(int id)
         {
             return await _clientService.GetById(id);
         }
 
         // POST: api/Client
-        public async Task<ClienShortDTO> Post([FromBody] AddClientDTO newClient)
+        public async Task<ClientShortDTO> Post([FromBody] AddClientDTO newClient)
         {
             return await _clientService.RegisterClient(newClient);
         }

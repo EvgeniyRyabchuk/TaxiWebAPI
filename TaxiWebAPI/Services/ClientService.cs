@@ -12,7 +12,7 @@ namespace TaxiWebAPI.Services
 {
     public class ClientService
     {
-        public async Task<ClienShortDTO> RegisterClient(AddClientDTO newClient)
+        public async Task<ClientShortDTO> RegisterClient(AddClientDTO newClient)
         {
             Client clientByPhoneNumber = await _DAL.Clients.ByPhoneNumber(newClient.PhoneNumber);
 
@@ -25,24 +25,24 @@ namespace TaxiWebAPI.Services
                 registeredClient = await _DAL.Clients.Register(clientToRegister);
             }
 
-            return registeredClient.Adapt<ClienShortDTO>();
+            return registeredClient.Adapt<ClientShortDTO>();
         }
 
-        internal async Task<List<ClienShortDTO>> GetAll()
+        internal async Task<List<ClientShortDTO>> GetAll()
         {
             List<Client> allClients = await _DAL.Clients.All();
 
-            return allClients.Adapt<List<ClienShortDTO>>();
+            return allClients.Adapt<List<ClientShortDTO>>();
         }
 
-        public async Task<ClienShortDTO> GetById(int id)
+        public async Task<ClientShortDTO> GetById(int id)
         {
             Client clientById = await _DAL.Clients.ById(id);
 
             if (clientById == null)
                 clientById = new Client();
 
-            return clientById.Adapt<ClienShortDTO>();
+            return clientById.Adapt<ClientShortDTO>();
         }
 
         public async Task<bool> UpdateClient(EditClientDTO clientToUpdate)
