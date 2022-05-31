@@ -9,7 +9,7 @@ namespace TaxiWebAPI.Models.DbCtx
 {
     public class TaxiDbContext : DbContext
     {
-        public TaxiDbContext() : base("TaxiDb") { }
+        public TaxiDbContext() : base("TaxiDb") { }  
 
         public DbSet<Client> Clients { get; set; }
     }

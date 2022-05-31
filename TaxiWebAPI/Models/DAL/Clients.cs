@@ -14,7 +14,7 @@ namespace TaxiWebAPI.Models.DAL
         {
             public static async Task<Client> Register(Client newClient)
             {
-                using (var db = new TaxiDbContext())
+                using (var db = new TaxiDbContext()) 
                 {
                     db.Clients.Add(newClient);
                     await db.SaveChangesAsync();
