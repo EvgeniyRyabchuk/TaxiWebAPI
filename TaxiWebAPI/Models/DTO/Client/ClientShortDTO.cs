@@ -1,6 +1,6 @@
 ﻿namespace TaxiWebAPI.Models.DTO
 {
-    public class ClienShortDTO
+    public class ClientShortDTO
     {
         public int ClientID { get; set; }
 

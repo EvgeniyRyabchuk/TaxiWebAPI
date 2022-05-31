@@ -172,6 +172,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,14 +181,24 @@
     <Compile Include="Migrations\202205290846442_DbInit.designer.cs">
       <DependentUpon>202205290846442_DbInit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205301722194_Added_Entity_Order.cs" />
+    <Compile Include="Migrations\202205301722194_Added_Entity_Order.designer.cs">
+      <DependentUpon>202205301722194_Added_Entity_Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAL\Clients.cs" />
+    <Compile Include="Models\DAL\Orders.cs" />
     <Compile Include="Models\DbCtx\TaxiDbContext.cs" />
-    <Compile Include="Models\DTO\AddClientDTO.cs" />
-    <Compile Include="Models\DTO\ClienShortDTO.cs" />
+    <Compile Include="Models\DTO\Order\AddOrderDTO.cs" />
+    <Compile Include="Models\DTO\Client\AddClientDTO.cs" />
+    <Compile Include="Models\DTO\Client\ClientShortDTO.cs" />
+    <Compile Include="Models\DTO\Client\EditClientDTO.cs" />
+    <Compile Include="Models\DTO\Order\OrderDTO.cs" />
     <Compile Include="Models\Entities\Client.cs" />
+    <Compile Include="Models\Entities\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\OrderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -275,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202205290846442_DbInit.resx">
       <DependentUpon>202205290846442_DbInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205301722194_Added_Entity_Order.resx">
+      <DependentUpon>202205301722194_Added_Entity_Order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

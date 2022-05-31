@@ -12,5 +12,8 @@ namespace TaxiWebAPI.Models.DbCtx
         public TaxiDbContext() : base("TaxiDb") { }  
 
         public DbSet<Client> Clients { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
     }
 }
