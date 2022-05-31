@@ -12,7 +12,7 @@ namespace TaxiWebAPI.Controllers
 
         public ClientsController()
         {
-            _clientService = new ClientService();
+            _clientService = new ClientService(); 
         }
 
         // GET: api/Client

@@ -17,7 +17,7 @@ namespace TaxiWebAPI.Tests
         }
 
         [TestMethod]
-        public void ShouldNotCreateUserWithExistingPhoneNumber()
+        public void ShouldNotCreateUserWithExistingPhoneNumber()  
         {
             //Init
             AddClientDTO addClientDTO = new AddClientDTO
